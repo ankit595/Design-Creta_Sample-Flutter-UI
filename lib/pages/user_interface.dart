@@ -6,36 +6,33 @@ class User_Interface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image(
-                image: AssetImage("assets/courses/s_g5.jpg"),
-              ),
-            ),
-            Container(
-              height: 500,
-              margin: EdgeInsets.symmetric(
-                  vertical: MediaQuery.of(context).size.height * 0.32),
+      body: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            child: Container(
+                height: MediaQuery.of(context).size.height * .35,
+                width: MediaQuery.of(context).size.width,
+                child: Image(
+                  fit: BoxFit.cover,
+                  image: AssetImage("assets/courses/s_g5.jpg"),
+                )),
+          ),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height * .7,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 5,
-                        offset: Offset(0, 2))
-                  ],
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(35),
                       topRight: Radius.circular(35))),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30.0),
-                    child: Text("User Interface Course",
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                    child: Text("User Interface Design",
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
@@ -48,7 +45,7 @@ class User_Interface extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Container(
-                          margin: EdgeInsets.only(left: 15),
+                          margin: const EdgeInsets.only(left: 15),
                           height: MediaQuery.of(context).size.height * 0.08,
                           width: MediaQuery.of(context).size.width * 0.25,
                           decoration: BoxDecoration(
@@ -59,10 +56,10 @@ class User_Interface extends StatelessWidget {
                                     color: Colors.blue.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 7,
-                                    offset: Offset(0, 2))
+                                    offset: const Offset(0, 2))
                               ]),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
                             child: Column(children: [
                               Text("24",
                                   style: TextStyle(
@@ -89,10 +86,10 @@ class User_Interface extends StatelessWidget {
                                     color: Colors.blue.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 7,
-                                    offset: Offset(0, 2))
+                                    offset: const Offset(0, 2))
                               ]),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
                             child: Column(children: [
                               Text("2 Hours",
                                   style: TextStyle(
@@ -118,10 +115,10 @@ class User_Interface extends StatelessWidget {
                                     color: Colors.blue.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 7,
-                                    offset: Offset(0, 2))
+                                    offset: const Offset(0, 2))
                               ]),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
                             child: Column(children: [
                               Text("50",
                                   style: TextStyle(
@@ -141,7 +138,7 @@ class User_Interface extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * .15,
                       ),
-                      Text("\$25",
+                      const Text("\$25",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
@@ -150,29 +147,29 @@ class User_Interface extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * .5,
                       ),
-                      Text(
+                      const Text(
                         "4.8",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Colors.blueAccent,
                       )
                     ],
                   ),
-                  Center(
+                  const Center(
                       child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                        "Learn modern user interface design with gamification aspects. "
-                        "From your fundamental all the way up to.",
-                        style: TextStyle(fontSize: 14, wordSpacing: 7)),
-                  )),
+                        padding: EdgeInsets.all(15.0),
+                        child: Text(
+                            "Learn to design applications using modern user interface design with gamification aspects. "
+                                "From your fundamental all the way up to.",
+                            style: TextStyle(fontSize: 14, wordSpacing: 7)),
+                      )),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * .23,
+                    height: MediaQuery.of(context).size.height * .25,
                   ),
                   Row(
                     children: [
@@ -182,10 +179,10 @@ class User_Interface extends StatelessWidget {
                       FloatingActionButton(
                         onPressed: () {},
                         backgroundColor: Colors.white,
-                        child: Icon(Icons.add, color: Colors.blue),
-                        shape: RoundedRectangleBorder(
+                        child: const Icon(Icons.add, color: Colors.blue),
+                        shape: const RoundedRectangleBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(16))),
+                            BorderRadius.all(Radius.circular(16))),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * .1,
@@ -195,11 +192,11 @@ class User_Interface extends StatelessWidget {
                         child: FloatingActionButton(
                           onPressed: () {},
                           backgroundColor: Colors.blue,
-                          child: Text("Join Course",
+                          child: const Text("Join Course",
                               style: TextStyle(fontSize: 18)),
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(16))),
+                              BorderRadius.all(Radius.circular(16))),
                         ),
                       )
                     ],
@@ -207,38 +204,41 @@ class User_Interface extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * .7,
-              child: Container(
-                margin: EdgeInsets.symmetric(
-                    vertical: MediaQuery.of(context).size.height * 0.29),
-                child: SizedBox(
-                  height: 60,
-                  child: FloatingActionButton(
-                    elevation: 10,
-                    onPressed: () {},
-                    child: Icon(Icons.favorite, size: 30),
-                  ),
+          ),
+          Positioned(
+            right: 30,
+            top: 210,
+            child: SizedBox(
+              height: 65,
+              width: 65,
+              child: FloatingActionButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)
                 ),
+                elevation: 10,
+                onPressed: () {},
+                child: const Icon(Icons.favorite, size: 30),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 10,
-                top: 30
-              ),
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height*.06,
-                child: FloatingActionButton(onPressed: () {
+          ),
+          Positioned(
+            top: 15,
+            left: 15,
+            child: SizedBox(
+              height: 55,
+              width: 55,
+              child: FloatingActionButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Icon(Icons.arrow_back_outlined),
-                ),
+                child: const Icon(Icons.arrow_back_outlined),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

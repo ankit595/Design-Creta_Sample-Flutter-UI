@@ -16,14 +16,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(30),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: MediaQuery.of(context).size.height * .1,
-        title: Text(
+        title: const Text(
           "𝕯𝖊𝖘𝖎𝖌𝖓 𝕮𝖗𝖊𝖙𝖆",
           style: TextStyle(
             fontSize: 27,
@@ -32,13 +32,13 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         actions: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 30,
             child: Image(
               image: AssetImage("assets/ui.png"),
             ),
           ),
-          Padding(padding: EdgeInsets.only(right: 20))
+          const Padding(padding: EdgeInsets.only(right: 20))
         ],
       ),
       body: ListView(
@@ -53,12 +53,12 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(10)),
                 placeholder: "Search For Course",
                 autocorrect: false,
-                suffix: Icon(Icons.search),
+                suffix: const Icon(Icons.search),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -81,12 +81,12 @@ class _HomePageState extends State<HomePage> {
                   height: 45,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(width: 1.0, color: Colors.blue),
-                      shape: RoundedRectangleBorder(
+                      side: const BorderSide(width: 1.0, color: Colors.blue),
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                     ),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Ui/Ux",
                       style: TextStyle(
                         fontSize: 17,
@@ -103,12 +103,12 @@ class _HomePageState extends State<HomePage> {
                   height: 45,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(width: 1.0, color: Colors.blue),
-                      shape: RoundedRectangleBorder(
+                      side: const BorderSide(width: 1.0, color: Colors.blue),
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15))),
                     ),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Coding",
                       style: TextStyle(
                         fontSize: 17,
@@ -125,12 +125,12 @@ class _HomePageState extends State<HomePage> {
                   height: 45,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(width: 1.0, color: Colors.blue),
-                      shape: RoundedRectangleBorder(
+                      side: const BorderSide(width: 1.0, color: Colors.blue),
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15))),
                     ),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Basic UI",
                       style: TextStyle(
                         fontSize: 17,
@@ -147,12 +147,12 @@ class _HomePageState extends State<HomePage> {
                   height: 45,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(width: 1.0, color: Colors.blue),
-                      shape: RoundedRectangleBorder(
+                      side: const BorderSide(width: 1.0, color: Colors.blue),
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15))),
                     ),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Templates",
                       style: TextStyle(
                         fontSize: 17,
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => User_Interface()));
+                            builder: (context) => const User_Interface()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(15),
                               child: Image(
                                 image:
-                                    AssetImage("assets/flutter/flutter_1.jpg"),
+                                    const AssetImage("assets/flutter/flutter_1.jpg"),
                                 width: MediaQuery.of(context).size.height * 0.2,
                               ),
                             ),
@@ -201,15 +201,15 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "User Interface \nDesign",
                                   style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                Padding(padding: EdgeInsets.all(5)),
-                                Row(
+                                const Padding(padding: EdgeInsets.all(5)),
+                                const Row(
                                   children: [
                                     Text("24 ɭesson"),
                                     SizedBox(
@@ -230,14 +230,14 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Row(
                                   children: [
-                                    Text("\$25",
+                                    const Text("\$25",
                                         style: TextStyle(
                                           fontSize: 17,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.blue,
                                         ),
                                         textAlign: TextAlign.center),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 50,
                                     ),
                                     SizedBox(
@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => User_Interface()));
+                            builder: (context) => const User_Interface()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -284,7 +284,7 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image(
-                                image: AssetImage("assets/flutter/flutter_2.jpg"),
+                                image: const AssetImage("assets/flutter/flutter_2.jpg"),
                                 width: MediaQuery.of(context).size.height * 0.2,
                               ),
                             ),
@@ -293,15 +293,15 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "User Interface \nDesign",
                                   style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                Padding(padding: EdgeInsets.all(5)),
-                                Row(
+                                const Padding(padding: EdgeInsets.all(5)),
+                                const Row(
                                   children: [
                                     Text("22 ɭesson"),
                                     SizedBox(
@@ -322,14 +322,14 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Row(
                                   children: [
-                                    Text("\$18",
+                                    const Text("\$18",
                                         style: TextStyle(
                                           fontSize: 17,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.blue,
                                         ),
                                         textAlign: TextAlign.center),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 50,
                                     ),
                                     SizedBox(
@@ -359,7 +359,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => User_Interface()));
+                            builder: (context) => const User_Interface()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -376,7 +376,7 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image(
-                                image: AssetImage("assets/flutter/flutter_8.png"),
+                                image: const AssetImage("assets/flutter/flutter_8.png"),
                                 width: MediaQuery.of(context).size.height * 0.2,
                               ),
                             ),
@@ -385,15 +385,15 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "User Interface \nDesign",
                                   style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                Padding(padding: EdgeInsets.all(5)),
-                                Row(
+                                const Padding(padding: EdgeInsets.all(5)),
+                                const Row(
                                   children: [
                                     Text("26 ɭesson"),
                                     SizedBox(
@@ -414,14 +414,14 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Row(
                                   children: [
-                                    Text("\$22",
+                                    const Text("\$22",
                                         style: TextStyle(
                                           fontSize: 17,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.blue,
                                         ),
                                         textAlign: TextAlign.center),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 50,
                                     ),
                                     SizedBox(
@@ -451,7 +451,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => User_Interface()));
+                            builder: (context) => const User_Interface()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -469,7 +469,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(15),
                               child: Image(
                                 image:
-                                    AssetImage("assets/flutter/flutter_10.jpg"),
+                                    const AssetImage("assets/flutter/flutter_10.jpg"),
                                 width: MediaQuery.of(context).size.height * 0.2,
                               ),
                             ),
@@ -478,15 +478,15 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "User Interface \nDesign",
                                   style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                Padding(padding: EdgeInsets.all(5)),
-                                Row(
+                                const Padding(padding: EdgeInsets.all(5)),
+                                const Row(
                                   children: [
                                     Text("20 ɭesson"),
                                     SizedBox(
@@ -507,14 +507,14 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Row(
                                   children: [
-                                    Text("\$22",
+                                    const Text("\$22",
                                         style: TextStyle(
                                           fontSize: 17,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.blue,
                                         ),
                                         textAlign: TextAlign.center),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 50,
                                     ),
                                     SizedBox(
@@ -541,8 +541,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -556,71 +556,70 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Row(
+
             children: [
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => App_Design()));
+                          builder: (context) => const App_Design()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.28,
-                    width: MediaQuery.of(context).size.width * 0.48,
+                    width: MediaQuery.of(context).size.width * 0.482,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.grey[300]),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "App Design Course",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const Padding(padding: EdgeInsets.all(5)),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Text("20 ɭesson"),
+                              SizedBox(
+                                width: 12,
+                              ),
                               Text(
-                                "App Design Course",
+                                "4.8",
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Row(
-                                children: [
-                                  Text("20 ɭesson"),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Text(
-                                    "4.8",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.blueAccent,
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image(
-                                    image: AssetImage(
-                                        "assets/flutter/flutter_7.png"),
-                                    width:
-                                        MediaQuery.of(context).size.height * 0.19,
-                                  ),
-                                ),
-                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.blueAccent,
+                              )
                             ],
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image(
+                                image: const AssetImage(
+                                    "assets/flutter/flutter_7.png"),
+                                width:
+                                    MediaQuery.of(context).size.height * 0.19,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -630,7 +629,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Web_Design()));
+                          builder: (context) => const Web_Design()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
@@ -640,55 +639,53 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.grey[300]),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Web Design Course",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const Padding(padding: EdgeInsets.all(5)),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Text("20 ɭesson"),
+                              SizedBox(
+                                width: 12,
+                              ),
                               Text(
-                                "Web Design Course",
+                                "4.8",
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Row(
-                                children: [
-                                  Text("20 ɭesson"),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Text(
-                                    "4.8",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.blueAccent,
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image(
-                                    image: AssetImage(
-                                        "assets/flutter/flutter_12.png"),
-                                    width: MediaQuery.of(context).size.height *
-                                        0.155,
-                                  ),
-                                ),
-                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.blueAccent,
+                              )
                             ],
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image(
+                                image: const AssetImage(
+                                    "assets/flutter/flutter_12.png"),
+                                width: MediaQuery.of(context).size.height *
+                                    0.155,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -702,65 +699,63 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => App_Design()));
+                          builder: (context) => const App_Design()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.29,
-                    width: MediaQuery.of(context).size.width * 0.48,
+                    width: MediaQuery.of(context).size.width * 0.481,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.grey[300]),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "App Design Course",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const Padding(padding: EdgeInsets.all(5)),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Text("20 ɭesson"),
+                              SizedBox(
+                                width: 12,
+                              ),
                               Text(
-                                "App Design Course",
+                                "4.8",
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Row(
-                                children: [
-                                  Text("20 ɭesson"),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Text(
-                                    "4.8",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.blueAccent,
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image(
-                                    image: AssetImage(
-                                        "assets/flutter/flutter_4.jpg"),
-                                    width:
-                                        MediaQuery.of(context).size.height * 0.19,
-                                  ),
-                                ),
-                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.blueAccent,
+                              )
                             ],
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image(
+                                image: const AssetImage(
+                                    "assets/flutter/flutter_4.jpg"),
+                                width:
+                                    MediaQuery.of(context).size.height * 0.19,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -770,7 +765,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Web_Design()));
+                          builder: (context) => const Web_Design()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
@@ -780,55 +775,53 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.grey[300]),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Web Design Course",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const Padding(padding: EdgeInsets.all(5)),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Text("20 ɭesson"),
+                              SizedBox(
+                                width: 12,
+                              ),
                               Text(
-                                "Web Design Course",
+                                "4.8",
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.all(5)),
-                              Row(
-                                children: [
-                                  Text("20 ɭesson"),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Text(
-                                    "4.8",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.blueAccent,
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image(
-                                    image: AssetImage(
-                                        "assets/flutter/flutter_3.png"),
-                                    width: MediaQuery.of(context).size.height *
-                                        0.155,
-                                  ),
-                                ),
-                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.blueAccent,
+                              )
                             ],
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image(
+                                image: const AssetImage(
+                                    "assets/flutter/flutter_3.png"),
+                                width: MediaQuery.of(context).size.height *
+                                    0.155,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
